@@ -22,6 +22,8 @@ npm run preview
 - Não são exibidos preços, horários, telefone, nota ou depoimentos como fatos porque não foi possível verificá-los de forma atual e consistente durante a pesquisa.
 - A seção de cardápio é uma direção visual. O texto evita atribuir pratos específicos sem um cardápio legível e verificável.
 - As imagens do Hero, seleção visual e galeria vêm do Unsplash e são imagens editoriais de referência, não fotografias oficiais do Churrasqueto. Nenhuma imagem foi gerada por IA.
+- Os ícones de WhatsApp e Instagram aparecem apenas no rodapé e abrem uma busca pública pelo canal correto; não foram apresentados como contas oficiais porque isso não pôde ser verificado.
+- Não foram adicionadas imagens geradas por IA: não havia uma ferramenta de geração disponível nesta execução e não seria correto inventar pratos ou apresentá-los como fotografia do restaurante.
 - O mapa usa OpenStreetMap via tiles CARTO Dark, com marcador aproximado no endereço pesquisado. Confirme a posição exata antes de uso comercial.
 - Este projeto não é o site oficial do restaurante.
 
