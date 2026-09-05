@@ -26,6 +26,10 @@ app.innerHTML = `
     <nav class="desktop-nav" aria-label="Navegação principal">
       ${navItems.map(([id, label]) => `<a href="#${id}" data-nav="${id}">${label}</a>`).join('')}
     </nav>
+    <div class="header-social-links" aria-label="Canais a confirmar">
+      <a href="https://www.google.com/search?q=Churrasqueto+WhatsApp+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar WhatsApp do Churrasqueto" title="WhatsApp — contato a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0 11.8 11.8 0 0 0 1.8 17.7L0 24l6.5-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Zm-8.4 18a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.2-.4c.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4Z"/></svg></a>
+      <a href="https://www.google.com/search?q=Churrasqueto+Instagram+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar Instagram do Churrasqueto" title="Instagram — conta a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg></a>
+    </div>
     <a class="header-cta" href="#localizacao">Visitar a casa <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="mobile-nav" aria-label="Navegação móvel">
