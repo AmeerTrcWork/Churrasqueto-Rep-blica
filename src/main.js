@@ -30,6 +30,7 @@ app.innerHTML = `
       <a href="https://www.google.com/search?q=Churrasqueto+WhatsApp+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar WhatsApp do Churrasqueto" title="WhatsApp — contato a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0 11.8 11.8 0 0 0 1.8 17.7L0 24l6.5-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Zm-8.4 18a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.2-.4c.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4Z"/></svg></a>
       <a href="https://www.google.com/search?q=Churrasqueto+Instagram+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar Instagram do Churrasqueto" title="Instagram — conta a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg></a>
     </div>
+    <div class="language-switcher" aria-label="Escolher idioma"><button type="button" data-language="pt" class="active">PT</button><span>/</span><button type="button" data-language="en">EN</button></div>
     <a class="header-cta" href="#localizacao">Visitar a casa <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="mobile-nav" aria-label="Navegação móvel">
@@ -85,6 +86,109 @@ app.innerHTML = `
   <footer class="footer"><div class="footer-main"><a class="brand" href="#inicio"><span>Churrasqueto</span></a><p>Carne, fogo e cidade.<br />República, São Paulo.</p><div class="footer-links">${navItems.slice(0, 4).map(([id, label]) => `<a href="#${id}">${label}</a>`).join('')}<div class="social-links" aria-label="Canais a confirmar"><a href="https://www.google.com/search?q=Churrasqueto+WhatsApp+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar WhatsApp do Churrasqueto" title="WhatsApp — contato a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0 11.8 11.8 0 0 0 1.8 17.7L0 24l6.5-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Zm-8.4 18a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.2-.4c.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4Z"/></svg></a><a href="https://www.google.com/search?q=Churrasqueto+Instagram+R.+24+de+Maio+237+S%C3%A3o+Paulo" target="_blank" rel="noreferrer" aria-label="Pesquisar Instagram do Churrasqueto" title="Instagram — conta a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg></a></div></div></div><div class="footer-bottom"><span>R. 24 de Maio, 237 · São Paulo - SP</span><span>Projeto demonstrativo independente — desenvolvido por AmeerTrc.</span></div></footer>
   <div class="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Fechar imagem">×</button><img src="" alt="" /></div>
 `;
+
+const translations = {
+  pt: {
+    nav: ['Início', 'Cardápio', 'Sobre', 'Galeria', 'Avaliações', 'Localização'],
+    headerCta: 'Visitar a casa <span aria-hidden="true">↗</span>',
+    mobileCta: 'Visitar a casa ↗',
+    eyebrow: '<span></span> República · São Paulo',
+    heroTitle: 'O fogo que<br /><em>reúne.</em>',
+    heroCopy: 'Carne, brasa e o pulso do centro de São Paulo. Uma experiência para chegar com fome e ficar pela atmosfera.',
+    menuButton: 'Ver cardápio <span>↘</span>',
+    directions: 'Como chegar <span>↗</span>',
+    scroll: '<i></i> Scroll para explorar',
+    introKicker: '01 <span></span> A casa',
+    introTitle: 'Uma pausa quente<br /><em>no coração da cidade.</em>',
+    introText: '<p>Churrasqueto está na República, em um dos endereços mais vivos do centro de São Paulo. Aqui, o encontro começa na brasa e continua à mesa.</p><p class="muted">Este projeto é uma apresentação digital independente. O endereço foi confirmado em fontes públicas; informações operacionais devem ser confirmadas diretamente com o restaurante.</p>',
+    menuKicker: '02 <span></span> Seleção visual',
+    menuTitle: 'Da brasa<br /><em>à mesa.</em>',
+    menuIntro: 'Uma leitura visual da cozinha de carnes e acompanhamentos brasileiros. Consulte o cardápio atual diretamente com a casa.',
+    galleryKicker: '03 <span></span> Galeria',
+    galleryTitle: 'Fogo em<br /><em>primeiro plano.</em>',
+    galleryNote: 'Imagens editoriais de referência para a proposta visual. Não são fotografias oficiais do estabelecimento.',
+    reviewKicker: '04 <span></span> Impressão',
+    reviewTitle: 'A cidade<br /><em>fala baixo.</em>',
+    reviewText: 'Não exibimos notas ou depoimentos sem uma fonte atual verificável. A reputação da casa merece dados reais, não números inventados.',
+    reviewLink: 'Ver avaliações atuais ↗',
+    locationKicker: '05 <span></span> Localização',
+    locationTitle: 'Encontre<br /><em>a brasa.</em>',
+    mapTag: '<span></span> Churrasqueto · República',
+    menuCards: [['01 / Grelha', 'Cortes na brasa', 'Texturas marcadas pelo fogo, servidas para compartilhar.'], ['02 / Acompanhamentos', 'Clássicos brasileiros', 'O conforto que completa a mesa.'], ['03 / Experiência', 'Chegue com fome.', 'Os itens e preços podem variar. Confirme a seleção disponível no dia.']],
+    quote: 'O centro de São Paulo pede lugares com presença. Lugares que você reconhece pelo calor antes mesmo de sentar.',
+    footerTagline: 'Carne, fogo e cidade.<br />República, São Paulo.',
+    footerNotice: 'Projeto demonstrativo independente — desenvolvido por AmeerTrc.',
+  },
+  en: {
+    nav: ['Home', 'Menu', 'About', 'Gallery', 'Reviews', 'Location'],
+    headerCta: 'Visit the house <span aria-hidden="true">↗</span>',
+    mobileCta: 'Visit the house ↗',
+    eyebrow: '<span></span> República · São Paulo',
+    heroTitle: 'Where fire<br /><em>brings us together.</em>',
+    heroCopy: 'Meat, embers and the pulse of downtown São Paulo. A place to arrive hungry and stay for the atmosphere.',
+    menuButton: 'View menu <span>↘</span>',
+    directions: 'Get directions <span>↗</span>',
+    scroll: '<i></i> Scroll to explore',
+    introKicker: '01 <span></span> The house',
+    introTitle: 'A warm pause<br /><em>in the heart of the city.</em>',
+    introText: '<p>Churrasqueto is in República, one of downtown São Paulo’s most vibrant addresses. Here, the gathering starts at the grill and carries on at the table.</p><p class="muted">This is an independent digital presentation. The address was confirmed through public sources; operational details should be confirmed directly with the restaurant.</p>',
+    menuKicker: '02 <span></span> Visual selection',
+    menuTitle: 'From the grill<br /><em>to the table.</em>',
+    menuIntro: 'A visual direction inspired by Brazilian grilled meats and shared sides. Check the current menu directly with the house.',
+    galleryKicker: '03 <span></span> Gallery',
+    galleryTitle: 'Fire in<br /><em>the foreground.</em>',
+    galleryNote: 'Editorial reference images for the visual direction. These are not official photographs of the restaurant.',
+    reviewKicker: '04 <span></span> Impression',
+    reviewTitle: 'The city<br /><em>speaks softly.</em>',
+    reviewText: 'We do not display ratings or testimonials without a current verifiable source. The house deserves real data, not invented numbers.',
+    reviewLink: 'See current reviews ↗',
+    locationKicker: '05 <span></span> Location',
+    locationTitle: 'Find<br /><em>the fire.</em>',
+    mapTag: '<span></span> Churrasqueto · República',
+    menuCards: [['01 / Grill', 'Cuts over fire', 'Fire-marked textures, served to share.'], ['02 / Sides', 'Brazilian classics', 'The comfort that completes the table.'], ['03 / Experience', 'Come hungry.', 'Items and prices may vary. Confirm today’s selection with the house.']],
+    quote: 'Downtown São Paulo calls for places with presence. Places you recognize by their warmth before you even sit down.',
+    footerTagline: 'Meat, fire and city.<br />República, São Paulo.',
+    footerNotice: 'Independent demonstration project — developed by AmeerTrc.',
+  },
+};
+
+function setLanguage(language) {
+  const content = translations[language];
+  document.documentElement.lang = language === 'en' ? 'en' : 'pt-BR';
+  document.querySelectorAll('[data-nav]').forEach((link, index) => { link.textContent = content.nav[index]; });
+  document.querySelector('.header-cta').innerHTML = content.headerCta;
+  document.querySelector('.mobile-cta').textContent = content.mobileCta;
+  document.querySelector('.hero .eyebrow').innerHTML = content.eyebrow;
+  document.querySelector('.hero h1').innerHTML = content.heroTitle;
+  document.querySelector('.hero-copy').textContent = content.heroCopy;
+  document.querySelector('.hero .button-solid').innerHTML = content.menuButton;
+  document.querySelector('.hero .button-ghost').innerHTML = content.directions;
+  document.querySelector('.scroll-note').innerHTML = content.scroll;
+  document.querySelector('.intro .section-kicker').innerHTML = content.introKicker;
+  document.querySelector('.intro h2').innerHTML = content.introTitle;
+  document.querySelector('.intro-text').innerHTML = content.introText;
+  document.querySelector('.menu-section .section-kicker').innerHTML = content.menuKicker;
+  document.querySelector('.section-heading h2').innerHTML = content.menuTitle;
+  document.querySelector('.section-heading p').textContent = content.menuIntro;
+  document.querySelector('.gallery-section .section-kicker').innerHTML = content.galleryKicker;
+  document.querySelector('.gallery-top h2').innerHTML = content.galleryTitle;
+  document.querySelector('.gallery-top > p').textContent = content.galleryNote;
+  document.querySelector('.reviews .section-kicker').innerHTML = content.reviewKicker;
+  document.querySelector('.reviews h2').innerHTML = content.reviewTitle;
+  document.querySelector('.review-note p').textContent = content.reviewText;
+  document.querySelector('.review-note a').textContent = content.reviewLink;
+  document.querySelector('.location .section-kicker').innerHTML = content.locationKicker;
+  document.querySelector('.location h2').innerHTML = content.locationTitle;
+  document.querySelector('.location .button').innerHTML = content.directions;
+  document.querySelector('.map-tag').innerHTML = content.mapTag;
+  document.querySelectorAll('.menu-label').forEach((label, index) => { label.querySelector('span').textContent = content.menuCards[index][0]; label.querySelector('h3').textContent = content.menuCards[index][1]; label.querySelector('p').textContent = content.menuCards[index][2]; });
+  document.querySelector('.quote-section blockquote').textContent = content.quote;
+  document.querySelector('.footer-main > p').innerHTML = content.footerTagline;
+  document.querySelector('.footer-bottom > span:last-child').textContent = content.footerNotice;
+  document.querySelectorAll('[data-language]').forEach(button => button.classList.toggle('active', button.dataset.language === language));
+}
+
+document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
 
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
